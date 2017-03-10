@@ -35,7 +35,6 @@ tail -n +2 "$surveys_responses" >surveys_responses.csv
 
 # create hdfs hospital compare
 hdfs dfs -mkdir /user/w205/hospital_compare
-hdfs dfs -mkdir /user/w205/hospital_compare
 hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
 hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
 hdfs dfs -mkdir /user/w205/hospital_compare/readmission
