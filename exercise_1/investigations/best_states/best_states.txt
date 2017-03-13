@@ -1,7 +1,7 @@
 The ranking for state is the average of hospitals' rank_score in that state.
 The lower this ranking is the better. Only the states with more than 10 hospitals are considered.
 
-The top 10 states are then:
+The top 10 states for medicare models are:
 
 STATE	Average_rank_score
 +++++++++++++++++++++++++++
