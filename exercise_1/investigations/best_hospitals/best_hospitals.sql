@@ -50,6 +50,11 @@ else 0
 end as m_image_score
 from transform_hospitals;
 
+drop table hospitals_general_score;
+create table hospitals_general_score as
+select provider_id, hospital_name, state,
+(0.7*rating + 0.3*(mortality_score + safety_score + readmission_score + p_experience_score + e_care_score + t_care_score + m_image_score)) hospitals_general_score
+from temp_hospitals;
 
 drop table hospitals_general_rank;
 create table hospitals_general_rank as
