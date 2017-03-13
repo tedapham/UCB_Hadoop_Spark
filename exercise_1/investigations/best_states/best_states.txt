@@ -1,0 +1,18 @@
+The ranking for state is the average of hospitals' rank_score in that state.
+The lower this ranking is the better. Only the states with more than 10 hospitals are considered.
+
+The top 10 states are then:
+
+STATE	Average_rank_score
++++++++++++++++++++++++++++
+SD      1323.1366666666665                                                      
+MT	1441.3573770491798
+ID	1569.4195121951223
+KS	1632.9065693430653
+ND	1655.213636363636
+NE	1662.8933333333339
+PR	1693.6846153846154
+AK	1754.5363636363638
+IA	1759.9551724137925
+WY	1798.3999999999999
+

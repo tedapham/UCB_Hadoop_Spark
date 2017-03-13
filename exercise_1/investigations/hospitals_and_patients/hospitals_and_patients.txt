@@ -1,0 +1,26 @@
+Join transform_surveys and best_hospitals so that we can compute the correlation coefficient 
+between hospital ranking (rating) score and patients survey responses regarding nurse, doctor etc.
+
+Since I used the ranking score which implicates lower is better, I multiplied the computed correlation by -1
+to account for this method to indicate positive correlation. 
+
+The results are:
+
+
+Correlation coeff between hospital rating and nurse rating = 0.48339620530809635 
+Correlation between hospital rating and doctor rating = 0.4947905079954879
+Correlation coeff between hospital rating and  staff rating = 0.5711558863794441	
+Correlation coeff between hospital rating and pain management=0.4798737218622439	
+Correlation coeff between hospital rating and quality communication =0.4588237402741231
+Correlation coeff between hospital rating and environment =0.5445447985394134	
+Correlation coeff between hospital rating and quality discharge =0.3491216066212744	
+Correlation coeff between hospital rating and overall hospital performance=0.4997264434722071
+
+Hospital rating (by previously described method) correlate well with patients survey rating.
+In particular, staff rating and hospital rating is the highest, followed by environment rating, 
+patient rating of the hospital,doctor rating, nurse rating, pain management, pain medicine communication, 
+and quality discharge.
+
+It seems the method used to access the quality of care is well correlated with patients' assessment.
+From the correlation, it would be advised for hospitals to invest resource to staff then hospital enviroment.
+

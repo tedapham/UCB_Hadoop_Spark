@@ -1,0 +1,67 @@
+ 
+best_hospitals.txt
+
+
+Data are used from hospitals.csv, effective_care.csv, and readmissions.csv
+The hospital_rank, effective_care_rank, and readmissions_rank were
+calculated respectively.
+
+
+First, the general hospital_general_rank is computed by assigning scores to
+the national comparison parameters: 2 for above average, 1 same, 0 not available, -1 for below.
+
+	These are done for mortality, safety_of_care, readmission, patient experience, effective_of_care,
+	timeliness, and efficient use of medical imaging.
+
+	The hospital_overall_rating score is coverted to float and zeros are assigned for
+	not available.
+
+	The hospital general score is computed 
+	by assing 70% value to rating and 30% to the sum of national comparison
+	higher is better. Then the hospital is ranked with this score and hospital_general_rank
+	is assigned.
+
+
+
+The 2nd step is to get the effective_care_rank for each provider
+For this metric, the focus is on the measure ID where lower score means better
+because these are the majority the parameters from effective_care.
+
+	For example:
+		ED_1b median time from ED to ED Deparutre for Addmited patients
+		ED_2b admit decision time
+		OP_20 median time from ed to provider contact for ED patients
+		OP_22 left before being seen.
+
+	Ranking for each chosen measure_id is computed using rank()
+	Then, the sum(rank) is computed for each provider.
+	The average rank is then evalued by dividng the sum(rank) by total measure_id
+	and from that, the effective_care_rank is computed.
+
+
+
+The 3rd step is to get readmission specific rank
+Similar to the effective care, for the readmission score lower is better. 
+All measure_ids are included and the readmssion_rank is computed in a similar fashion 
+to the effective_care_rank.
+
+
+Finally, the total rank_score is (general_rank + effective_rank*2 + readmission_rank*2)/3.
+More weight is given to the hospital_general_rank (derived from hospitals.csv data).
+Note that the lower the rank_score the better the hospital.
+
+
+The results are:
+
+Provider_ID hospital 								State	Rank_Score
+==========================================================================
+420102		GHS PATEWOOD MEMORIAL HOSPITAL					SC	270.2
+360352		SURGICAL HOSPITAL AT SOUTHWOODS					OH	334.4
+330270		HOSPITAL FOR SPECIAL SURGERY					NY	351.8
+110200		NORTHSIDE MEDICAL CENTER					GA	371.2
+220088		NEW ENGLAND BAPTIST HOSPITAL					MA	472.6
+110233		SOUTHEASTERN REGIONAL MEDICAL CENTER				GA	486.4
+370190		SOUTHWESTERN REGIONAL MEDICAL CENTER, INC			OK	495.6
+450766		UT SOUTHWESTERN UNIVERSITY HOSPITAL-ZALE LIPSHY			TX	571.8
+170186		KANSAS HEART HOSPITAL						KS	595.8
+450851		BAYLOR HEART AND VASCULAR HOSPITAL				TX	643.8

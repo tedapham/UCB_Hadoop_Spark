@@ -1,0 +1,16 @@
+Use data from transform_effective_care table, calculate the variance of each procedure by grouping measure_id.
+Make sure there are more than 30 (typical value for sampling) entries for each measure_id
+The top 10 procedures that have the highest variance are:
+
+Measure_ID Measure_name  Variance
+==============================================================================================
+ED_1b   Median Time from ED Arrival to ED Departure for Admitted ED Patients    10811.276308797285
+ED_2b	Admit Decision Time to ED Departure Time for Admitted Patients	4175.25729073216
+OP_18b	Median Time from ED Arrival to ED Departure for Discharged ED Patients	1862.5197069204853
+OP_3b	Median Time to Transfer to Another Facility for Acute Coronary Intervention- Reporting Rate	1050.3831507083971
+OP_31	Percentage of patients aged 18 years and older who had cataract surgery and had improvement in visual function achieved within 90 days following the cataract surgery	856.5066174207448
+OP_29	Appropriate Follow-Up Interval for Normal Colonoscopy in Average Risk Patients	600.399583081167
+OP_2	Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival	460.320987654321
+OP_23	Head CT or MRI Scan Results for Acute Ischemic Stroke or Hemorrhagic Stroke Patients who Received Head CT or MRI Scan Interpretation Within 45 minutes of ED Arrival	397.03673005866665
+OP_30	Colonoscopy Interval for Patients with a History of Adenomatous Polyps - Avoidance of Inappropriate Use	371.6908658403638
+OP_20	Median Time from ED Arrival to Provider Contact for ED patients	331.9008076047884
