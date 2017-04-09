@@ -92,7 +92,7 @@ UT SOUTHWESTERN UNIVERSITY HOSPITAL-ZALE LIPSHY
 
 
 ## BEST STATES
- The top 10 states are then: 
+ The top states are then: 
 
 ```
 STATE        
