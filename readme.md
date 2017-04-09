@@ -26,7 +26,7 @@ The analysis was done with HDFS and SPARK on an AWS EC2 instance, with three maj
 
 ## HOSPITAL_ER Diagram
 
-
+![ER Diagram](hospitalER.png)
 
 
 
