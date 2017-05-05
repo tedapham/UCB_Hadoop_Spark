@@ -48,6 +48,8 @@ to the effective_care_rank.
 
 Finally, the total rank_score is (general_rank + effective_rank*2 + readmission_rank*2)/3.
 More weight is given to the hospital_general_rank (derived from hospitals.csv data).
+This approach is appropriate because it takes into account each hospital ranking from
+3 different methodologies: general info, readmission, and effective_care.
 
 This approach is appropriate because it takes into account each hospital ranking from
 3 different methodologies: general info, readmission, and effective_care.
